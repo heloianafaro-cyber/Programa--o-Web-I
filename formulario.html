@@ -3,32 +3,50 @@
     <title>Formulário</title>
 </head>
 <body>
-    <h1>Formulário</h1>
-    <h2>Dados Pessoais</h2>
-    <p>Nome:<br>
-        Sobrenome:<br>
-        Email:<br>
-        Telefone:<br>
-        Data de Nascimento: dd/mm/aaaa<br></p>
-    <h2>Endereço</h2>
-    <p>Rua:<br>
-        Número:<br>
-        Cidade:<br>
-        Estado:<br>
-        CEP:<br></p>
-    <h2>Preferências</h2>
-    <p>Cor Favorita:<br>
-        Gênero: <li>Masculino</li>   <li>Feminino</li><br>
-        Interesses:<ul><li>Esportes</li>
-            <li>Música</li>
-            <li>Tecnologia</li></ul></p>
-    <h2>Upload de Arquivos</h2>
-    <p>Escolha um arquivo:
+    <h1>Formulário Completo</h1>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+    <p>Nome: <label><input type="text"></label></p>
+    <p>Sobrenome: <label><input type="text"></label></p>
+    <p>Email: <label><input type="email"></label></p>
+    <p>Telefone: <label><input type="tel"></label></p>
+    <p>Data de Nascimento: <label><input type="date"></label></p>
+    </fieldset>
 
-    </p>
+    <fieldset>
+        <legend>Endereço</legend>
+        <p>Rua: <label> <input type="text"></label></p>
+        <p>Número: <label><input type="text"></label></p>
+        <p>Cidade: <label><input type="text"></label></p>
+        <p>Estado: <label><input type="text"></label></p>
+        <p>CEP: <label><input type="text"></label></p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Preferências</legend>
+    <p><form> Cor Favorita:<label></form> <select>
+            <option value="vermelho">Vermelho</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+        </select></label></p>
+        Gênero: <label><input type="radio" name="genero" value="masculino"> Masculino </label>
+        <label><input type="radio" name="genero" value="feminino"> Feminino </label><br>
+        Interesses: <br>
+        <input type="checkbox" name="interesses" value="esportes"> Esportes <br>
+        <input type="checkbox" name="interesses" value="musica"> Música <br>
+        <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia <br>
+    </fieldset>
 
-    <h2>Informações de Login</h2>
-    <p>Nome do usuário:<br>
-        Senha:<br>
-        Confirmar senha:</p>
+    <fieldset>
+        <legend>Upload de Arquivos</legend>
+        <p>Escolha um arquivo: <label><input type="file" name="arquivo"></label></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informações de Login</legend>
+        <p>Nome do usuário:<label><input type="text" name="username"></label><br></p>
+    <p>Senha: <label><input type="password" name="password"></label><br></p>
+    <p>Confirmar senha: <label><input type="password" name="confirm_password"></label></p>
+    </fieldset>
+    <input type="submit" value="Enviar">
 </body>
